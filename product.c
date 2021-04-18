@@ -70,5 +70,20 @@ int deleteProduct(Product *p){
         return 0;
 }
 
+int saveFile(Product *p[], int count){ 
 
+ 	FILE *fp = open("info.txt", "w");
+        
+        for(int i = 0; i<count; i++){ 
+                
+       		fprintf(fp, "%s %f %d %f %d\n", p[i].name, p[i].weight, p[i].price, p[i].starPoint, p[i].starCount);
+
+        }    
+
+
+        fclose(fp);  
+
+        
+        return 0; 
+}
 
