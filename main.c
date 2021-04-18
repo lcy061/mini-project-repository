@@ -16,7 +16,7 @@ int main(){
                 #ifdef DEBUG
                 printf("DEBUG :: Check\n");                            
                 #endif
-                printf("숫자를 입력해 주세요(1.품목생성 2.목록 3.업데이트 4.삭제 5.저장 0.끝내기) :");
+                printf("숫자를 입력해 주세요(1.품목생성 2.목록 3.업데이트 4.삭제 5.저장 6.불러오기 7.검색 0.끝내기) :");
                 scanf("%d", &num);
                 
                 if(num == 0){
@@ -39,8 +39,11 @@ int main(){
                         scanf("%d", &select);
                         deleteMultiProduct(p1, select);
                 }else if(num==5){ 
-   		        saveFile(p1, count);
-                }      
+                        saveFile(p1, count);
+                }
+                else if(num==6){ 
+                        count = load(p1);
+                }          
      }    
         return 0;
 }
