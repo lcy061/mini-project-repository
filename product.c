@@ -75,6 +75,7 @@ int deleteProduct(Product *p){
 
 int saveFile(Product *p, int count){ 
 
+
         FILE *fp = fopen("info.txt", "w");
         
         for(int i = 0; i<count; i++){ 
@@ -87,7 +88,26 @@ int saveFile(Product *p, int count){
 
 
         fclose(fp); 
-
+        
+        printf("저장 성공\n");
         return 0; 
 }
+
+
+int loadFile(Product *p, int count){ 
+
+
+        FILE *fp = fopen("info.txt", "r");
+        
+        for(int i = 0; i<count; i++){                 
+                fscanf(fp, "%s %f %d %f %d\n", p[i].name, &p[i].weight, &p[i].price, &p[i].starPoint, &p[i].starCount);
+        }       
+
+
+        fclose(fp); 
+        
+        printf("불러오기 성공\n");
+        return 0; 
+}
+
 
