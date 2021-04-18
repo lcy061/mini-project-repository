@@ -20,5 +20,5 @@ void updateMultiProduct(Product *p1, int select){
 }
 
 void deleteMultiProduct(Product *p1, int select){ 
-    deleteProduct(&p1[select]); 
+    deleteProduct(&p1[select-1]); 
 }
