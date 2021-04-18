@@ -14,10 +14,10 @@ typedef struct Product{
 //***************************
 //FILE 관련
 //****************************
-int loadFile(Product *p[], int count);
+int loadFile(Product *p, int count);
 //파일 정보 읽어서 구조체에 저장 
 //결과값(성공여부)return. 
-int saveFile(Product *p[], int count);
+int saveFile(Product *p, int count);
 //구조체 정보 txt파일에 저장
 //결과(성공여부) return 
 //****************************

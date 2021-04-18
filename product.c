@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include "product.h"
 
+
+
 int createProduct(Product *p){
 
         printf("제품 정보를 입력해주세요. \n");
@@ -70,20 +72,22 @@ int deleteProduct(Product *p){
         return 0;
 }
 
-int saveFile(Product *p[], int count){ 
 
- 	FILE *fp = open("info.txt", "w");
+int saveFile(Product *p, int count){ 
+
+        FILE *fp = fopen("info.txt", "w");
         
         for(int i = 0; i<count; i++){ 
                 
-       		fprintf(fp, "%s %f %d %f %d\n", p[i].name, p[i].weight, p[i].price, p[i].starPoint, p[i].starCount);
+                fprintf(fp, "%s %f %d %f %d\n", p[i].name, p[i].weight, p[i].price, p[i].starPoint, p[i].starCount);
 
-        }    
-
-
-        fclose(fp);  
+        }
 
         
+
+
+        fclose(fp); 
+
         return 0; 
 }
 
