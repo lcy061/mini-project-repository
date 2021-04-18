@@ -30,12 +30,12 @@ int main(){
                        readMultiProduct(p1, count);
                 }
                 else if(num==3){
-                        printf("업데이트 숫자 입력 : "); 
+                        printf("업데이트하고 싶은 제품 숫자 입력 : "); 
                         scanf("%d", &select);
                         updateMultiProduct(p1, select);
 
                 }else if(num==4){
-                        printf("삭제 숫자 입력 : "); 
+                        printf("삭제하고 싶은 제품 숫자 입력 : "); 
                         scanf("%d", &select);
                         deleteMultiProduct(p1, select);
                 }else if(num==5){ 
