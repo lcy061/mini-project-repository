@@ -94,22 +94,32 @@ int saveFile(Product *p, int count){
 }
 
 
-int loadFile(Product *p){ 
+int loadFile(Product *p, int count){ 
 
         int num = 0; 
-        int eo;
+        
 
         FILE *fp = fopen("info.txt", "r");
         
-        while(eo!=0){
-               eo = fscanf(fp, "%s %f %d %f %d\n", p[num].name, &p[num].weight, &p[num].price, &p[num].starPoint, &p[num].starCount);
-               num++;
-        }       
+        for(int i = 0; i < count; i++){
+               fscanf(fp, "%s %f %d %f %d", p[num].name, &p[num].weight, &p[num].price, &p[num].starPoint, &p[num].starCount);
 
+
+                if(feof(fp)){ break; }
+
+                printf("%s\n", p[num].name); 
+
+                //printf("%s %f %d %f %d\n", p[num].name, p[num].weight, p[num].price, p[num].starPoint, p[num].starCount);
+
+
+               num++;
+               printf("%d\n", num); 
+               
+        }       
 
         fclose(fp);         
         printf("불러오기 성공\n");
-        return 0; 
+        return num; 
 }
 
 

@@ -42,7 +42,7 @@ int main(){
                         saveFile(p1, count);
                 }
                 else if(num==6){ 
-                        count = load(p1);
+                        count = loadFile(p1, MAX);
                 }          
      }    
         return 0;
