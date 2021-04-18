@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h> 
 #include "product.h"
 
 
@@ -107,13 +108,12 @@ int loadFile(Product *p, int count){
 
                 if(feof(fp)){ break; }
 
-                printf("%s\n", p[num].name); 
-
+               
                 //printf("%s %f %d %f %d\n", p[num].name, p[num].weight, p[num].price, p[num].starPoint, p[num].starCount);
 
 
                num++;
-               printf("%d\n", num); 
+               
                
         }       
 
@@ -122,4 +122,23 @@ int loadFile(Product *p, int count){
         return num; 
 }
 
+void searchProduct(Product *p, int count){ 
 
+        char name[50]; 
+        int num; 
+
+        printf("찾고 싶은 제품명 입력: ");
+        scanf("%s", name);
+
+        for(int i=0; i<count; i++){ 
+                if(!strcmp(name, p[i].name)){ 
+                        
+                        readProduct(p[i]);                        
+                        printf("\n");
+                        num++;          
+                }
+        }
+
+        if(num == 0){ printf("찾으시는 제품이 없습니다."); }
+        
+}
