@@ -53,18 +53,7 @@ int listProduct(Product *p[], int count);
 //****************************
 //Search 기능 
 //****************************
-void searchProduct(Product *p[], int count);
-//Search1
-//원하는 제품 이름으로 찾아 출력 
-void searchProductByStarPoint(Product *p[], int count); 
-//Search2
-//별점을 기준으로(ex)4점 이상) 제품을 찾아서 출력
-void searchProductByPrice(Product *p[], int count);
-//Search3 
-//가격을 기준으로 제품을 찾아서 출력 
-void searchProductByWeight(Product *p[], int count);
-//Search4
-//중량을 기준으로 제품을 찾아서 출력 
+void searchProduct(Product *p, int count);
 //****************************
 
 #endif

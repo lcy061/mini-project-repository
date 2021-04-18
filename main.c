@@ -43,7 +43,10 @@ int main(){
                 }
                 else if(num==6){ 
                         count = loadFile(p1, MAX);
-                }          
+                }
+                else if(num==7){ 
+                        searchProduct(p1, count);
+                }              
      }    
         return 0;
 }
