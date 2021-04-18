@@ -28,10 +28,10 @@ int readProduct(Product p){
 
 
         printf("\n제품명 : %s\n", p.name);
-        printf("중량 : %.1f\n ", p.weight);
-        printf("값 : %d\n", p.price);
+        printf("중량 : %.1f KG\n ", p.weight);
+        printf("값 : %d 원\n", p.price);
         printf("별점 : %.1f\n", p.starPoint);
-        printf("별점수 : %d\n", p.starCount);
+        printf("별점수 : %d 명\n", p.starCount);
 
 
 
