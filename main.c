@@ -45,7 +45,19 @@ int main(){
                         count = loadFile(p1, MAX);
                 }
                 else if(num==7){ 
-                        searchProduct(p1, count);
+                        printf("1. 이름 검색 2.가격 검색 3.별점 검색 : "); 
+                        scanf("%d", &num);
+                        if(num == 1){
+                                searchProduct(p1, count);
+                        }
+                        else if(num ==2){ 
+                                searchPrice(p1, count);
+                        }
+                        else if(num ==3){ 
+                                searchStar(p1, count);
+                        }else{ 
+                                printf("잘못 입력하셨습니다.\n"); 
+                        }
                 }              
      }    
         return 0;

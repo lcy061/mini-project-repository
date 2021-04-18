@@ -142,3 +142,45 @@ void searchProduct(Product *p, int count){
         if(num == 0){ printf("찾으시는 제품이 없습니다."); }
         
 }
+
+void searchPrice(Product *p, int count){ 
+
+        int pr; 
+        int num; 
+
+        printf("찾고 싶은 가격 입력: ");
+        scanf("%d", &pr);
+
+        for(int i=0; i<count; i++){ 
+                if(pr == p[i].price){ 
+                        
+                        readProduct(p[i]);                        
+                        printf("\n");
+                        num++;          
+                }
+        }
+
+        if(num == 0){ printf("찾으시는 제품이 없습니다."); }
+        
+}
+
+void searchStar(Product *p, int count){ 
+
+        float pr; 
+        int num; 
+
+        printf("찾고 싶은 최소 별점 입력: ");
+        scanf("%f", &pr);
+
+        for(int i=0; i<count; i++){ 
+                if(pr <= p[i].starPoint){ 
+                        
+                        readProduct(p[i]);                        
+                        printf("\n");
+                        num++;          
+                }
+        }
+
+        if(num == 0){ printf("찾으시는 제품이 없습니다."); }
+        
+}

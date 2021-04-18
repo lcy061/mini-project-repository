@@ -43,12 +43,14 @@ int deleteProduct(Product *p);
 
 
 
-
-
 //****************************
 //Search 기능 
 //****************************
 void searchProduct(Product *p, int count);
+void searchPrice(Product *p, int count);
+void searchStar(Product *p, int count);
+//Search1
+//원하는 제품 이름으로 찾아 출력 
 //****************************
 
 #endif
